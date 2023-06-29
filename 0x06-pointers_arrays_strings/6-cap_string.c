@@ -1,39 +1,36 @@
 #include "main.h"
 
 /**
- * cap_string - Capitalizes all words of a string.
- * @str: The string to be capitalized.
+ * cap_string - function reverses the content of an array of integers.
+ * @a: Pointer to array
  *
- * Return: A pointer to the changed string.
+ * Return: Array with capitalize every strings.
  */
-char *cap_string(char *str)
+char *cap_string(char *a)
 {
-	int index = 0;
+	int i, j, k;
+	char b[13] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 
-	while (str[index])
+	i = 0;
+	while (a[i] != '\0')
 	{
-		while (!(str[index] >= 'a' && str[index] <= 'z'))
-			index++;
-
-		if (str[index - 1] == ' ' ||
-		    str[index - 1] == '\t' ||
-		    str[index - 1] == '\n' ||
-		    str[index - 1] == ',' ||
-		    str[index - 1] == ';' ||
-		    str[index - 1] == '.' ||
-		    str[index - 1] == '!' ||
-		    str[index - 1] == '?' ||
-		    str[index - 1] == '"' ||
-		    str[index - 1] == '(' ||
-		    str[index - 1] == ')' ||
-		    str[index - 1] == '{' ||
-		    str[index - 1] == '}' ||
-		    index == 0)
-			str[index] -= 32;
-
-		index++;
+		i++;
 	}
+	for (j = 0 ; j < i ; j++)
+	{
+		if (a[j] > 96 && a[j] < 123)
+		{
+			for (k = 0; k < 13; k++)
+			{
+				if (a[j - 1] == b[k])
+				{
+					a[j] = a[j] - 32;
+				}
+			}
+		}
+	}
+	if (a[0] > 96 && a[0] < 123)
+		a[0] = a[0] - 32;
+	return (a);
 
-	return (str);
 }
-
