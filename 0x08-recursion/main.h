@@ -21,4 +21,7 @@ int is_prime_number(int n);
 /*Function that returns 1 if a string is a palindrome and 0 if not*/
 int is_palindrome(char *s);
 
+/*Function that compares two strings and returns 1 if strings are identical*/
+int wildcmp(char *s1, char *s2);
+
 #endif /* MAIN_H */
