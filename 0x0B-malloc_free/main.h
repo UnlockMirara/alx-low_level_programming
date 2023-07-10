@@ -22,4 +22,7 @@ void free_grid(int **grid, int height);
 /*Function that concatenates all the arguments of your program*/
 char *argstostr(int ac, char **av);
 
+/*Function that splits a string into words*/
+char **strtow(char *str);
+
 #endif /* MAIN_H */
