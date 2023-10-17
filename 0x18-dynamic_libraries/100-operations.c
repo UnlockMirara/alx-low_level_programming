@@ -3,63 +3,61 @@
 #include <stdlib.h>
 
 /**
-* cop_add - adds a and b
-* @a: first number
-* @b: second number
-*
-* Return: sum of a and b
-*/
-int cop_add(int a, int b)
-{
-	return (a + b);
-}
-/**
- * cop_sub - subtracts the ints
- * @a: first int
- * @b: second int
- * Return: difference
+ * add - Computes the sum of two numbers
+ * @left: The left-sided number
+ * @right: The right-sided number
+ *
+ * Return: The sum of the two numbers
  */
-int cop_sub(int a, int b)
+int add(int left, int right)
 {
-	return (a - b);
+	return (left + right);
 }
+
 /**
- * cop_mul - multiplies the ints
- * @a: first int
- * @b: second int
- * Return: product
+ * sub - Computes the difference of two numbers
+ * @left: The left-sided number
+ * @right: The right-sided number
+ *
+ * Return: The difference of the two numbers
  */
-int cop_mul(int a, int b)
+int sub(int left, int right)
 {
-	return (a * b);
+	return (left - right);
 }
+
 /**
- * cop_div - divides the ints
- * @a: first int
- * @b: second int
- * Return: result
+ * mul - Computes the product of two numbers
+ * @left: The left-sided number
+ * @right: The right-sided number
+ *
+ * Return: The product of the two numbers
  */
-int cop_div(int a, int b)
+int mul(int left, int right)
 {
-	if (b == 0)
-	{
-		printf("Error\n");
-		exit(100);
-	}
-	return (a / b);
+	return (left * right);
 }
+
 /**
- * cop_mod - remainder of division of ints
- * @a: first int
- * @b: second int
- * Return: remainder
+ * div - Computes the quotient of two numbers
+ * @left: The left-sided number
+ * @right: The right-sided number
+ *
+ * Return: The quotient of the two numbers
  */
-int cop_mod(int a, int b)
+int my_div(int left, int right)
 {
-	if (b == 0)
-	{
-		printf("Error\n");
-		exit(100);
-	}
-	return (a % b);
+	return (left / right);
+}
+
+/**
+ * mod - Computes the modulo of two numbers
+ * @left: The left-sided number
+ * @right: The right-sided number
+ *
+ * Return: The modulo of the two numbers
+ */
+int mod(int left, int right)
+{
+	return (left % right);
 }
